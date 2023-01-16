@@ -33,6 +33,10 @@
     font-size: 16px;
     cursor: pointer;
     user-select: none;
+    transition: background-color .3s ease;
+  }
+  &__btn:hover {
+    background-color: #ea51fd;
   }
   &__warning {
     color: #fa6060;
@@ -47,6 +51,9 @@
     a {
       text-decoration: underline;
       font-weight: 600;
+    }
+    a:hover {
+      color: #808ac8;
     }
   }
 }

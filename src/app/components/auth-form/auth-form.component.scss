@@ -13,6 +13,7 @@
   justify-content: space-around;
   height: 100%;
   color: #484848;
+
   &__input {
     width: 80%;
     height: 40px;
@@ -22,6 +23,7 @@
     outline: none;
     border: none;
   }
+
   &__btn {
     width: 80%;
     border: none;
@@ -33,20 +35,32 @@
     font-size: 16px;
     cursor: pointer;
     user-select: none;
+    transition: background-color .3s ease;
   }
+
+  &__btn:hover {
+    background-color: #ea51fd;
+  }
+
   &__warning {
     color: #fa6060;
     font-size: 12px;
   }
+
   &__bottom {
     display: flex;
     font-size: 10px;
+
     span {
       margin-right: 5px;
     }
+
     a {
       text-decoration: underline;
       font-weight: 600;
+    }
+    a:hover {
+      color: #808ac8;
     }
   }
 }
