@@ -14,9 +14,8 @@ const routes: Routes = [
   {path: 'auth', component: AuthComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'companies', component: CompaniesListComponent},
-  {path: 'company/:id', component: DetailedCompanyComponent},
+  {path: 'company', component: DetailedCompanyComponent},
   {path: 'createCompany', component: CreateCompanyComponent},
-
   {path: '**', redirectTo: '', component: NotFoundComponent}
 ];
 

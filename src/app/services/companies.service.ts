@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpParams} from "@angular/common/http";
 import {ICompany} from "../models/company";
 import {Observable, retry, tap} from "rxjs";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ export class CompaniesService {
   }
 
   companies: ICompany[];
+  router: Router;
 
   getAll(): Observable<ICompany[]> {
     return this.http.get<ICompany[]>('https://random-data-api.com/api/company/random_company', {

@@ -1,6 +1,6 @@
 .company-card {
-  background: -webkit-linear-gradient(45deg, #ffffff,#80c5ff);
-  padding: 4px 6px;
+  background: #ddd2ec;
+  padding: 20px 30px;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -10,19 +10,35 @@
   height: 350px;
   flex-shrink: 1;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   color: #3e3e3e;
   cursor: pointer;
   position: relative;
+  transition: background-color .3s ease;
+  &:hover {
+    background: #dcc6fb;
+  }
+  &:hover &__btn {
+    background: #caa4ff;
+    color: white;
+  }
   &__image {
     z-index: 1;
-    width: 50%;
+    width: 60%;
   }
   &__title {
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 18px;
   }
   &__descr, &__type {
     font-size: 16px;
+    color: #666666;
+  }
+  &__btn {
+    border: none;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    transition: all .3s ease;
   }
 }
