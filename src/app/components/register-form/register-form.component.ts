@@ -53,5 +53,8 @@ export class RegisterFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (localStorage.getItem('loggedIn') === 'true') {
+      this.router.navigate(['/companies'])
+    }
   }
 }

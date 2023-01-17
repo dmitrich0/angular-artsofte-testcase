@@ -1,12 +1,14 @@
 import {Injectable} from '@angular/core';
 import {IUser} from "../models/user";
+import {Route, Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor() {
+  constructor(private router: Router) {
+
   }
 
   register(user: IUser): string {
@@ -26,6 +28,12 @@ export class AuthService {
     }
     else {
       return '';
+    }
+  }
+
+  checkAuth() {
+    if (localStorage.getItem('loggedIn') === 'false' || localStorage.getItem('loggedIn') === null) {
+      this.router.navigate(['/auth'])
     }
   }
 }
