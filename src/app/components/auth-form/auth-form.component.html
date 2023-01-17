@@ -1,11 +1,11 @@
 <div class="form-wrapper">
-  <form [formGroup]="authForm" class="auth-form">
+  <form [formGroup]="authForm" (submit)="submit()" class="auth-form">
     <h2>ВХОД</h2>
     <input formControlName="login" class="auth-form__input" type="text" placeholder="Введите логин">
     <p class="auth-form__warning" *ngIf="login.touched && (login.errors?.minlength || login.errors?.maxlength)">Длина логина: 6-16 символов</p>
     <input formControlName="password" class="auth-form__input" type="password" placeholder="Введите пароль">
     <p class="auth-form__warning" *ngIf="password.touched && (password.errors?.minlength || password.errors?.maxlength)">Длина пароля: 8-32 символа</p>
-    <button class="auth-form__btn">Войти</button>
+    <button class="auth-form__btn" type="submit">Войти</button>
     <div class="auth-form__bottom">
       <span>Ещё не зарегистрированы?</span>
       <a routerLink="/register">Регистрация</a>

@@ -1,0 +1,14 @@
+.wrapper {
+  background-color: #fff1f1;
+  padding: 30px 30px 0px 30px;
+}
+
+.companies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.company-card {
+  margin-bottom: 30px;
+}

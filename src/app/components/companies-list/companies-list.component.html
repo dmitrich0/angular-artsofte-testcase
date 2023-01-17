@@ -1,1 +1,8 @@
-<p>companies-list works!</p>
+<div class="wrapper">
+  <p *ngIf="isLoading" class="loading">Loading...</p>
+  <div class="companies" *ngIf="companiesService.companies">
+    <app-company-card class="company-card" *ngFor="let company of companiesService.companies" [company]="company">
+
+    </app-company-card>
+  </div>
+</div>

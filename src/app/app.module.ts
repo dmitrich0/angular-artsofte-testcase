@@ -13,6 +13,8 @@ import {AuthFormComponent} from './components/auth-form/auth-form.component';
 import {RegisterComponent} from './components/register/register.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {RegisterFormComponent} from './components/register-form/register-form.component';
+import { CompanyCardComponent } from './components/company-card/company-card.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import {RegisterFormComponent} from './components/register-form/register-form.co
     AuthFormComponent,
     RegisterComponent,
     RegisterFormComponent,
+    CompanyCardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
